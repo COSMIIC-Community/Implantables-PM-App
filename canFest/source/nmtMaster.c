@@ -588,17 +588,7 @@ void ProcessNMTLocalStateChange(CO_Data* d, UNS8 Data[3] )
       BlankCheckRemoteFlash();
       break;
     }
-  case NMT_Change_Task_Priority:
-    {
-     
-      break;
-    }
-  case NMT_Change_Watchdog_Time:
-    {
-      //CPU_INT32U tempTime = Param1 * 1000000; // unit in seconds
-      
-      break;
-    }
+
   case NMT_Reset_Module: 
     {      
       Reset_Module();
@@ -680,36 +670,6 @@ void ProcessNMTLocalStateChange(CO_Data* d, UNS8 Data[3] )
     }
     break;
  
-    //       case NMT_Reset_Comunication:
-    //          {            
-    //              UNS8 currentNodeId = getNodeId(d);
-    //             
-    //                if(d->NMT_Slave_Communications_Reset_Callback != NULL)
-    //                   d->NMT_Slave_Communications_Reset_Callback(d);
-    //        #ifdef CO_ENABLE_LSS
-    //                // LSS changes NodeId here in case lss_transfer.nodeID doesn't 
-    //                // match current getNodeId()
-    //                if(currentNodeId!=d->lss_transfer.nodeID)
-    //                   currentNodeId = d->lss_transfer.nodeID;
-    //        #endif
-    //    
-    //                // clear old NodeId to make SetNodeId reinitializing
-    //                // SDO, EMCY and other COB Ids
-    //                *d->bDeviceNodeId = 0xFF; 
-    //             
-    //                setNodeId(d, currentNodeId);
-    //             
-    //          }
-    //            d->NMTable[getNodeId(d)] = getState(d);
-    //break;
-  //case NMT_StartChannelLoop:
-      //enableRadio_ChannelLoop();
-  //    break;
-    
-  //case NMT_StopChannelLoop: 
-      //disableRadio_ChannelLoop();
-   //   break;
-      
   case NMT_Set_nBOOT_HighOut:
     IO0DIR |= BIT14;  //nBOOT as output 
     IO0SET  = BIT14; //nBOOT high

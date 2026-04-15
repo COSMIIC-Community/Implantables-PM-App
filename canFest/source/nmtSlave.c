@@ -44,32 +44,7 @@
 ** @param m
 **/
 
-/* NMT Commands, sent by master to change a slave state 
-------------------------------------------------------------- 
 
-#define NMT_Start_Nodes               0x01    
-#define NMT_Stop_Nodes                0x02
-#define NMT_Enter_Patient_Operation   0x03
-#define NMT_Enter_X_Manual            0x04
-#define NMT_Enter_Y_Manual            0x05
-#define NMT_Enter_Stop_Stim           0x06    
-#define NMT_Enter_Wait_Mode           0x07    
-#define NMT_Enter_Patient_Manual      0x08    
-#define NMT_Enter_Produce_X_Manual    0x09
-#define NMT_Do_Save_Cmd               0x0A
-#define NMT_Do_Restore_Cmd            0x0B
-#define NMT_Enter_Record_X            0x0C
-#define NMT_Network_On                0x0D
-#define NMT_Network_Off               0x0E
-#define NMT_Return_Node_Table	      0x10
-#define NMT_Return_Single_Node	      0x11
-#define NMT_Reset_Node                0x81
-#define NMT_Reset_Comunication        0x82
-#define NMT_Enter_Bootloader          0x83
-#define NMT_Start_Sync                0x84
-#define NMT_Stop_Sync                 0x85
-#define NMT_Reset_Watchdog            0x88
-**************************************************************/
 
 void processNMTstateChange(CO_Data* d, Message *m)
 {

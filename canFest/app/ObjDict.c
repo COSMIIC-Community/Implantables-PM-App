@@ -373,7 +373,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
                     const UNS8 ObjDict_highestSubIndex_obj1018 = 4; /* number of subindex - 1*/
                     INTEGER8 ObjDict_obj1018_Vendor_ID[10] = "NNPS"; 
                     const UNS8 ObjDict_obj1018_Product_Code = 0x2;	/* 2 */                
-                    const UNS32 ObjDict_obj1018_Revision_Number = 431;	
+                    const UNS32 ObjDict_obj1018_Revision_Number = 432;	
 
                     UNS32 ObjDict_obj1018_Serial_Number = 0x0;	//Application sets this, cannot be const
                     const subindex ObjDict_Index1018[] = 

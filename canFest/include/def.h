@@ -155,7 +155,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 /* NMT Command Specifier, implemented by a master device */
 /* ------------------------------------------------------------- */
-/* Broadcast Network command */
+/* For comprehensive list of NMT definitions and hex values present in all modules, refer to docs.cosmiic.org under Advanced -> NMT */
+
+/* PM-relevant - Broadcast Network Management */
 #define NMT_Start_Nodes               0x01    
 #define NMT_Stop_Nodes                0x02
 #define NMT_Enter_Patient_Operation   0x03
@@ -168,20 +170,11 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define NMT_Do_Save_Cmd               0x0A
 #define NMT_Do_Restore_Cmd            0x0B
 #define NMT_Enter_Record_X            0x0C
-#define NMT_Net_PDO_On                0x0D
-#define NMT_Net_PDO_Off               0x0E
 #define NMT_Enter_Charging_Mode       0x0F
-
-/* Broadcast Network management */
-#define NMT_Return_Node_Table	      0x10
-#define NMT_Return_Single_Node	      0x11
+#define NMT_Return_Node_Table	        0x10
+#define NMT_Return_Single_Node	     0x11
    
-/* Group Management   */
-#define NMT_Group_On                  0x20
-#define NMT_Group_Off                 0x21
-#define NMT_All_Groups_Off            0x22
-
-/* Local Node command */
+/* PM-relevant - local node commands */
 #define NMT_Reset_Node                0x81
 #define NMT_Reset_Comunication        0x82
 #define NMT_Enter_Bootloader          0x83
@@ -195,13 +188,11 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define NMT_Radio_WOR_ON              0x8B
 #define NMT_Radio_WOR_OFF             0x8C
 #define NMT_Run_Script                0x8D
-#define NMT_Enable_Scripts             0x8E
-#define NMT_Disable_Scripts            0x8F
+#define NMT_Enable_Scripts            0x8E
+#define NMT_Disable_Scripts           0x8F
 #define NMT_Delete_Script             0x90
-
 #define NMT_Radio_Address             0x92  
 #define NMT_Wake_Remote_Modules       0x93
-#define NMT_WOR_Start_POLL            0x94
 #define NMT_Network_On                0x95
 #define NMT_Network_Off               0x96
 #define NMT_Halt_RTC                  0x97
@@ -214,24 +205,12 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define NMT_Reset_Module              0x9E
 #define NMT_Enter_Low_Power           0x9F
 #define NMT_Network_On_Only           0xA0
-#define NMT_Start_SDO_Graph           0xA1
-#define NMT_Stop_SDO_Graph            0xA2
-#define NMT_Start_HS_Graph            0xA3
-#define NMT_Stop_HS_Graph             0xA4
-#define NMT_Load_Pattern              0xA5
-#define NMT_Read_Pattern              0xA6
 #define NMT_Reset_Global_Vars         0xA7
 #define NMT_Turn_OFF_Alarms           0xA8
-#define NMT_Turn_ON_PM_Scan           0xA9
-#define NMT_Turn_OFF_PM_Scan          0xAA
 #define NMT_Start_Script_Debug        0xAB
 #define NMT_Stop_Script_Debug         0xAC
 #define NMT_Single_Step_Debug         0xAD
 #define NMT_Stop_Script               0xAE
-#define NMT_TurnOn_Coil               0xAF
-#define NMT_TurnOff_Coil              0xB0
-#define NMT_Change_Task_Priority      0xB1
-#define NMT_Change_Watchdog_Time      0xB2
 #define NMT_Run_Script_Once           0xB3
 #define NMT_Set_Script_Delay_Time     0xB4
 #define NMT_Abort_Scripts             0xB5
@@ -244,23 +223,18 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #define NMT_BlankCheck_PM_Flash_Mem   0xBC
 #define NMT_Set_VSYS                  0xBE
 #define NMT_Exit_Low_Power            0xBF
-
-#define NMT_StartChannelLoop          0xD0
-#define NMT_StopChannelLoop           0xD1
-
 #define NMT_Read_Script_Lengths       0xE0
 #define NMT_Read_Script_Revs          0xE1
 #define NMT_Read_Script_IDs           0xE2
 #define NMT_Read_Script_CRCs          0xE3
 #define NMT_Calculate_Script_CRCs     0xE4
-
 #define NMT_Read_Memory_Now           0xE8
-
 #define NMT_Set_nBOOT_HighOut         0xF0
 #define NMT_Set_nBOOT_LowOut          0xF1
 #define NMT_Set_nBOOT_In              0xF2
 #define NMT_Enable_Gyro               0xF3
 #define NMT_Disable_Gyro              0xF4
+/* ----------------- end NMT Commands ---------------------------- */
 
 
 /** Status of the LSS transmission
