@@ -44,7 +44,7 @@
 ** @param m
 **/
 
-*/
+
 
 void processNMTstateChange(CO_Data* d, Message *m)
 {
